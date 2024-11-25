@@ -1,0 +1,711 @@
+/********** Template CSS **********/
+:root {
+    --primary: #2697cf;
+    --primary-gradiant: rgba(38, 151, 207, .2); 
+    --secondary: #c02e2d;
+    --light: #F6FFF2;
+    --dark: #263A4F;
+}
+
+.tab {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.tab4 {
+  tab-size: 8;
+}
+
+.btn {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: .5s;
+}
+
+.btn-primary,
+.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 28px;
+    height: 28px;
+}
+
+.btn-lg-square {
+    width: 46px;
+    height: 46px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 0;
+    border-radius: 0;
+    z-index: 99;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    padding: 30px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.sticky-top.navbar-dark .navbar-nav .nav-link {
+    padding: 20px 15px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    background: var(--secondary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-dark .navbar-nav .nav-link  {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-caption h4 {
+        font-size: 18px;
+        font-weight: 500 !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: 30px;
+        font-weight: 600 !important;
+    }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.bg-hero {
+    background: url(../img/carousel-1.jpg) top right no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 991.98px) {
+    .banner {
+        position: relative;
+        margin-top: -90px;
+        z-index: 1;
+    }
+}
+
+.bg-vegetable {
+    background: linear-gradient(rgba(52, 173, 84, .2), rgba(52, 173, 84, .2));
+    background-size: contain;
+}
+
+.bg-fruit {
+    background: linear-gradient(rgba(255, 153, 51, .2), rgba(255, 153, 51, .2));
+    background-size: contain;
+}
+
+.service-item {
+    box-shadow: 0 0 45px #EDEDED;
+    transition: .5s;
+}
+
+.about i,
+.service-item i {
+    background-image: linear-gradient(var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: .5s;
+}
+
+.service-item:hover {
+    color: var(--light);
+    background: var(--primary) !important;
+}
+
+.service-item:hover i {
+    background-image: linear-gradient(var(--light), var(--secondary));
+}
+
+.service-item:hover h4 {
+    transition: .5s;
+}
+
+.service-item:hover h4 {
+    color: var(--light);
+}
+
+.product-item {
+    padding: 0 30px 30px 30px;
+}
+
+.product-item .btn-action {
+    position: absolute;
+    width: 100%;
+    bottom: -40px;
+    left: 0;
+    opacity: 0;
+    transition: .5s;
+}
+
+.product-item:hover .btn-action {
+    bottom: 0;
+    opacity: 1;
+}
+
+.product-item h5 {
+    transition: .5s;
+}
+
+.product-item:hover h5 {
+    opacity: 0;
+}
+
+.product-carousel::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 55%;
+    bottom: 0;
+    left: 0;
+    background: url(../img/bg-product-1.png) left bottom no-repeat, url(../img/bg-product-2.png) right bottom no-repeat;
+    background-size: contain;
+    background-color: var(--primary);
+    z-index: -1;
+}
+
+.product-carousel .owl-nav {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.product-carousel .owl-nav .owl-prev,
+.product-carousel .owl-nav .owl-next{
+    position: relative;
+    width: 55px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: #FFFFFF;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.product-carousel .owl-nav .owl-prev:hover,
+.product-carousel .owl-nav .owl-next:hover {
+    color: var(--secondary);
+}
+
+.bg-testimonial {
+    background: url(../img/testimonial.jpg) top center no-repeat;
+    background-size: cover;
+}
+
+.testimonial-carousel {
+    background: rgba(52, 173, 84, .7);
+}
+
+.testimonial-carousel .owl-nav {
+    position: absolute;
+    width: calc(100% + 46px);
+    height: 46px;
+    top: calc(50% - 23px);
+    left: -23px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: #FFFFFF;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+    color: var(--secondary);
+}
+
+.testimonial-carousel .owl-item img {
+    width: 120px;
+    height: 120px;
+}
+
+.blog-item img {
+    transition: .5s;
+}
+
+.blog-item:hover img {
+    transform: scale(1.2);
+}
+
+.blog-overlay {
+    position: absolute;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    background: linear-gradient(rgba(52, 173, 84, 0), rgba(52, 173, 84, 1));
+    z-index: 1;
+}
+
+.bg-footer {
+    background: linear-gradient(var(--primary-gradiant), var(--primary-gradiant)), url(../img/footer.png) center bottom no-repeat;
+    background-size: contain;
+}
+
+@media (min-width: 991.98px) {
+}
+
+.container_main {
+
+    width: 1200px;
+  
+    margin:auto;
+  
+  }
+
+#quytrinh {
+
+    width: 100%;
+  
+    padding: 40px 0;
+  
+  }
+  
+  .title_qtrinh {
+  
+    width: 100%;
+  
+    text-align: center;
+  
+    max-width: 930px;
+  
+    margin: auto;
+  
+    margin-bottom: 30px;
+  
+  }
+  
+  .title_qtrinh h2 {
+  
+    font-family: 'UTMAvo';
+  
+    font-size: 30px;
+  
+    color: #fff;
+  
+    font-weight: normal;
+  
+    text-transform: uppercase;
+  
+  }
+  
+  .title_qtrinh p {
+  
+    font-family: 'RobotoRegular';
+  
+    font-size: 14px;
+  
+    color: #fff;
+  
+    line-height: 25px;
+  
+    margin-top: 15px;
+  
+  }
+
+.box-quytrinh {
+
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: space-between;
+  
+    position: relative;
+  
+    padding-bottom: 60px;
+  
+  }
+  
+  .box-quytrinh:after {
+  
+    content: '';
+  
+    width: 100%;
+  
+    height: 7px;
+  
+    background: #fff;
+  
+    position: absolute;
+  
+    left: 0;
+  
+    bottom: 0;
+  
+    border-radius: 10px;
+  
+    box-shadow: 0 0 9px rgba(255,255,255,0.87);
+  
+  }
+  
+  .item_qt {
+  
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: space-between;
+  
+  }
+  
+  .item_qt .box-item_qt {
+  
+    width: 150px;
+  
+  }
+  
+  .item_qt .box-item_qt p {
+  
+    font-family: 'RobotoRegular';
+  
+    font-size: 13px;
+  
+    color: #fff;
+  
+    height: 48px;
+  
+    overflow: hidden;
+  
+    line-height: 25px;
+  
+    margin-top: 10px;
+  
+    text-align: center;
+  
+  }
+  
+  .item_qt .img-qt {
+  
+    width: 150px;
+  
+    height: 150px;
+  
+    border-radius: 50%;
+  
+    background: var(--primary);
+  
+    border: 1px solid var(--primary);
+  
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: center;
+  
+    position: relative;
+  
+  }
+  
+  .item_qt.active .img-qt {
+  
+    background: var(--secondary);
+  
+    border-color: #fff;
+  
+  }
+  
+  .item_qt .img-qt:after {
+  
+    content: '';
+  
+    width: 23px;
+  
+    height: 23px;
+  
+    background: var(--primary);
+  
+    border-radius: 50%;
+  
+    position: absolute;
+  
+    left: 0;
+  
+    right: 0;
+  
+    margin: auto;
+  
+    bottom: -127px;
+  
+    border: 3px solid #fff;
+  
+    z-index: 99;
+  
+  }
+  
+  .item_qt.active .img-qt:after {
+  
+    background: var(--secondary);
+  
+  }
+  
+  .item_qt .img-qt h3 {
+  
+    max-width: 100px;
+  
+    text-align: center;
+  
+    font-family: 'RobotoBold';
+  
+    font-size: 18px;
+  
+    color: #fff;
+  
+    text-transform: uppercase;
+  
+  }
+  
+  .item_qt img {
+  
+    margin: 0 15px;
+  
+    margin-bottom: 75px;
+  
+  }
+
+  .transition {
+
+    transition:all 0.5s;
+  
+    -moz-transition:all 0.5s;
+  
+    -webkit-transition:all 0.5s;
+  
+    -o-transition:all 0.5s;
+  
+  }
+
+  /*--product--*/
+
+  #content .item_pr_mg {
+
+    margin-top: 30px;
+  
+  }
+  
+  #content .item_pr_mg:last-child {
+  
+    margin-bottom: 0;
+  
+  }
+
+  .language img {
+    margin-left: 5px;
+  }
+
+  .item_pr {
+
+    width:100%;
+  
+    position:relative;
+  
+  }
+  
+  .item_pr .images_pr {
+  
+    width:50%;
+  
+    float: left;
+  
+    position: relative;
+  
+  }
+  
+  .item_pr .images_pr > a {
+  
+    display:block;
+  
+    overflow:hidden;
+  
+    position:relative;
+  
+  }
+  
+  .item_pr .images_pr img {
+  
+    vertical-align:top;
+  
+    max-width: 100%;
+  
+  }
+  
+  .item_pr:hover .images_pr img {
+  
+    transform:scale(1.1,1.1);
+  
+  }
+  
+  .item_pr .des_pr {
+  
+    width: 50%;
+  
+    float: left;
+  
+    padding-left: 40px;
+  
+  }
+  
+  .item_pr .des_pr h3 a {
+  
+    font-family:'UTMAvo';
+  
+    font-size:30px;
+  
+    color:var(--primary);
+  
+    position:relative;
+  
+    width:100%;
+  
+    display:block;
+  
+    margin-bottom: 10px;
+  
+    white-space:nowrap;
+  
+    overflow:hidden;
+  
+    text-overflow:ellipsis;
+  
+    font-weight:normal;
+  
+    text-transform: uppercase;
+  
+  }
+  
+  .item_pr .des_pr p {
+  
+    font-family:'RobotoRegular';
+  
+    font-size:15px;
+  
+    color:#393939;
+  
+    line-height: 28px;
+  
+    max-height: 225px;
+  
+    overflow: hidden;
+  
+  }
+  
+  .item_pr .des_pr p span {
+  
+    color:#ed1c24;
+  
+  }
+  
+  .item_pr .des_pr h3:hover a
+  
+  {
+  
+    color: red;
+  
+  }
+  
+  
+  
+  .item_pr .des_pr a.a_product {
+  
+    font-family: 'RobotoRegular';
+  
+    font-size: 13px;
+  
+    color: #fff;
+  
+    display: block;
+  
+    margin-top: 20px;
+  
+    width: 125px;
+  
+    height: 36px;
+  
+    line-height: 36px;
+  
+    text-align: center;
+  
+    text-transform: uppercase;
+  
+    border: 1px solid var(--primary);
+  
+    position: relative;
+  
+    transition: all 0.5s;
+  
+    border-radius: 25px;
+  
+    background: var(--primary);
+  
+  }
+  
+  .item_pr .des_pr a.a_product img {
+  
+    margin-right: 5px;
+  
+  }
+  
+  .item_pr .des_pr a:hover {
+  
+    color: #000;
+  
+    background: #fff;
+  
+  }
+
+  /*---product---*/
